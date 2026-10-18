@@ -1,0 +1,33 @@
+{
+    "name": "astral-ui",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite --host 127.0.0.1",
+        "build": "vue-tsc --noEmit && vite build",
+        "preview": "vite preview --host 127.0.0.1",
+        "lint": "eslint . --max-warnings=0",
+        "lint:fix": "eslint . --fix --max-warnings=0",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "check": "npm run lint && npm run format:check && npm run build",
+        "build:example": "vue-tsc --noEmit && vite build --mode example"
+    },
+    "dependencies": {
+        "vue": "^3.5.22"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.39.5",
+        "@vitejs/plugin-vue": "^6.0.1",
+        "@vue/eslint-config-prettier": "^10.2.0",
+        "@vue/eslint-config-typescript": "^14.9.0",
+        "eslint": "^9.39.5",
+        "eslint-plugin-vue": "^10.11.1",
+        "globals": "^17.13.0",
+        "prettier": "^3.9.10",
+        "typescript": "~5.9.3",
+        "vite": "^7.1.10",
+        "vue-tsc": "^3.1.1"
+    }
+}

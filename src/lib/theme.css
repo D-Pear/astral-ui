@@ -1,0 +1,130 @@
+@font-face {
+    font-family: Astral;
+    src: url('./assets/font.ttf') format('truetype');
+    font-display: swap;
+}
+:root {
+    background: var(--h-dark);
+    --h-font: Astral, 'Microsoft YaHei', 'PingFang SC', sans-serif;
+    --h-cursor: url('./assets/cursor.svg') 3 2, default;
+    --h-gold: #c7a66a;
+    --h-gold-bright: #e9d39d;
+    --h-gold-dark: #927343;
+    --h-ink: #303139;
+    --h-muted: #76757b;
+    --h-paper: #dededc;
+    --h-paper-light: #eeede8;
+    --h-line: rgba(63, 61, 61, 0.19);
+    --h-dark: #22232c;
+    --h-danger: #a64c47;
+    --h-success: #527561;
+    --h-radius: 0 22px 0 0;
+    --h-duration: 180ms;
+    --h-slider-accent: #eea03e;
+    font-family: var(--h-font);
+    font-synthesis: none;
+    cursor: var(--h-cursor);
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    cursor: var(--h-cursor);
+}
+input[type='range']::-webkit-slider-thumb {
+    cursor: var(--h-cursor);
+}
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+button {
+    color: inherit;
+}
+button:disabled,
+input:disabled,
+select:disabled {
+    opacity: 0.38;
+}
+:focus-visible {
+    outline: 2px solid var(--h-gold-dark);
+    outline-offset: 4px;
+}
+.h-field {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    gap: 6px;
+    min-width: 0;
+    font-size: 12px;
+}
+.h-field__label {
+    display: block;
+    color: #66666c;
+    font-size: 12px;
+    line-height: 18px;
+}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        animation-delay: 0s !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0s !important;
+        scroll-behavior: auto !important;
+    }
+}
+:root[data-h-motion='reduced'] *,
+:root[data-h-motion='reduced'] *::before,
+:root[data-h-motion='reduced'] *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+}
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    font-weight: 400;
+}
+svg {
+    flex-shrink: 0;
+}
+::selection {
+    background: #baa16b66;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--h-scrollbar-thumb, #ffffffaa);
+}
+::-webkit-scrollbar-track {
+    background: var(--h-scrollbar-track, #ffffff08);
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+@supports not selector(::-webkit-scrollbar) {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--h-scrollbar-thumb, #ffffffaa) var(--h-scrollbar-track, #ffffff08);
+    }
+}
+body {
+    margin: 0;
+}
