@@ -1,0 +1,12 @@
+node_modules/
+dist/
+reference/
+tests/
+.vscode/
+
+.env
+.env.*
+!.env.example
+*.local
+*.log
+*.tsbuildinfo
